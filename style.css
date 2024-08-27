@@ -1,0 +1,314 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: justify;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Estilo atualizado para a seção hero, sobre mim */
+#hero {
+    background: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: left; 
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.profile-pic {
+    border-radius: 50%; 
+    width: 150px; 
+    height: 150px;
+    object-fit: cover; 
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+/*******************************************************************/
+
+/* Botões */
+.btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+/**********************************************/
+
+/* Estilo para os vídeos dos projetos */
+.project video {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* certificados */
+.project img {
+    max-width: 100%;  /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto;     /* Mantém a proporção da imagem */
+    max-height: 100px; /* Define uma altura máxima para as imagens */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;    /* Centraliza a imagem dentro do contêiner */
+}
+
+
+/*****************************************************/
+
+/* alinhar o sobre mim */
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+#projects h2 {
+    margin-bottom: 20px;
+}
+
+#projects p {
+    max-width: 800px; 
+    line-height: 1.6;
+}
+/***************************************************************/
+
+/* Estilo para o carrossel */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.certificate {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.certificate img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/*************************************************************/
+
+/* Botões de navegação */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/******************************************************/
+
+.project {
+    min-width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project.active {
+    display: flex;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo do link */
+a.github-link {
+    color: #ffffff; 
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #ffffff; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+/**************************************************/
+
+/* Estilo do link ao passar o mouse */
+a.github-link:hover {
+    background-color: #ffffff; 
+    color: #000000; 
+    border-color: #000000; 
+    cursor: pointer; 
+}
+/*****************************************************/
+
+/* Estilo para o formulário de contato */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+#contact form input, #contact form textarea, #contact form button {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#contact form button {
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+/*******************************************************/
+
+/* Estilo para os links de redes sociais */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #ffffff; 
+    font-size: 24px;
+    margin: 0 10px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+/*********************************************************/

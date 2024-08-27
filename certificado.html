@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificados - Piersilvio de Carvalho Orlandini</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-content {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .certificate {
+            min-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button.prev, button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        button.prev {
+            left: 0;
+        }
+
+        button.next {
+            right: 0;
+        }
+
+        button.prev:hover, button.next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="github-link">Home</a></li>
+                <li><a href="#certificates" class="github-link">Certificados</a></li>
+                <li><a href="index.html#projects" class="github-link">Projetos</a></li>
+                <li><a href="index.html#contact" class="github-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="certificates">
+        <h2>Meus Certificados</h2>
+        <div class="carousel">
+            <button class="prev">&#10094;</button>
+            <div class="carousel-content">
+                <div class="certificate">
+                    <img src="certificado1.jpg" alt="Certificado 1">
+                    <h3>Automation Anywhere Secure Bot Developer</h3>
+                </div>
+                <div class="certificate">
+                    <img src="certificado2.jpg" alt="Certificado 2">
+                    <h3>Did You Know that RPA is Simple,yet Powerful, When Compared to Traditional Automation?</h3>
+                </div>
+                <div class="certificate">
+                    <img src="certificado3.jpg" alt="Certificado 3">
+                    <h3>Getting Started with Robotic Process Automation(RPA)</h3>
+                </div>
+                <div class="certificate">
+                    <img src="certificado4.jpg" alt="Certificado 4">
+                    <h3>Secure Bot Deployment</h3>
+                </div>
+                <div class="certificate">
+                    <img src="certificado5.jpg" alt="Certificado 5">
+                    <h3>Automation Anywhere Secure Bot Developer</h3>
+                </div>
+                <div class="certificate">
+                    <img src="certificado6.jpg" alt="Certificado 6">
+                    <h3>Secure Bot Design</h3>
+                </div>
+                <div class="certificate">
+                    <img src="certificado7.jpg" alt="Certificado 6">
+                    <h3>IA na prática - Rocketseat</h3>
+                </div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Piersilvio de Carvalho Orlandini. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nextBtn = document.querySelector('.next');
+            const prevBtn = document.querySelector('.prev');
+            const carouselContent = document.querySelector('.carousel-content');
+            let currentIndex = 0;
+
+            function showCertificate(index) {
+                const offset = -index * 100;
+                carouselContent.style.transform = `translateX(${offset}%)`;
+            }
+
+            nextBtn.addEventListener('click', function () {
+                currentIndex = (currentIndex + 1) % document.querySelectorAll('.certificate').length;
+                showCertificate(currentIndex);
+            });
+
+            prevBtn.addEventListener('click', function () {
+                currentIndex = (currentIndex - 1 + document.querySelectorAll('.certificate').length) % document.querySelectorAll('.certificate').length;
+                showCertificate(currentIndex);
+            });
+        });
+    </script>
+</body>
+
+</html>
